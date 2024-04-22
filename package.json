@@ -1,19 +1,19 @@
 {
-    "name": "webdriverio-appium-app",
-    "scripts": {
-      "singleAndroid": "./node_modules/.bin/wdio android-sample/android-single.conf.js",
-      "parallelAndroid": "./node_modules/.bin/wdio android-sample/android-parallel.conf.js",
-      "singleIOS": "./node_modules/.bin/wdio ios-sample/ios-single.conf.js",
-      "parallelIOS": "./node_modules/.bin/wdio ios-sample/ios-parallel.conf.js",
-
-      "singleAndroidWindows": "node_modules\\.bin\\wdio android-sample\\android-single.conf.js",
-      "parallelAndroidWindows": "node_modules\\.bin\\wdio android-sample\\android-parallel.conf.js",
-      "singleIOSWindows": "node_modules\\.bin\\wdio ios-sample\\ios-single.conf.js",
-      "parallelIOSWindows": "node_modules\\.bin\\wdio ios-sample\\ios-parallel.conf.js"
-    },
-    "dependencies": {
-      "@wdio/cli": "^5.20.1",
-      "@wdio/local-runner": "^5.20.1",
-      "@wdio/mocha-framework": "^5.18.7"
-    }
+  "name": "webdriverio-appium-app",
+  "scripts": {
+    "parallel": "node_modules\\.bin\\wdio ios-parallel.conf.js",
+    "parallelWeb": "node_modules\\.bin\\wdio ios-web-parallel.conf.js",
+    "SingleiOSApp": "node_modules\\.bin\\wdio ios_ltOptions_w3c/ios-app-single-ltOptions-w3c.conf.js",
+    "SingleiOSWeb": "node_modules\\.bin\\wdio ios_ltOptions_w3c/ios-web-single-ltOptions-w3c.conf.js"
+  },
+  "dependencies": {
+    "@wdio/cli": "^8.36.0",
+    "@wdio/local-runner": "^8.36.0",
+    "@wdio/mocha-framework": "^8.36.0",
+    "appium": "^2.5.2",
+    "npm-check-updates": "^16.14.18"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
   }
+}
