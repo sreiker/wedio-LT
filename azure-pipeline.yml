@@ -34,7 +34,7 @@ steps:
   displayName: npm install
   inputs:
     command: 'custom'
-    customCommand: 'npm install'
+    customCommand: 'install --production'
 
 - task: CmdLine@2
   displayName: Change Directory
@@ -45,7 +45,7 @@ steps:
 - task: CmdLine@2
   displayName: Webdriver.io Execution
   inputs:
-    script: "npm run SingleAndroidWeb"
+    script: "npx wdio .\android_ltOptions_w3c\android-web-single-ltOptions-w3c.conf.js"
   env:
     TENANT: ${{ parameters.tenant }}
     LT_USERNAME: $(USERNAME)
