@@ -25,7 +25,8 @@ name: WebdriverIO pipeline - $(Build.BuildId) - Tenant ${{ parameters.tenant }}
 appendCommitMessageToRunName: false
 
 pool:
-  vmImage: ubuntu-latest
+  MylocalPool
+  #vmImage: ubuntu-latest
 
 steps:
 - task: Npm@1
