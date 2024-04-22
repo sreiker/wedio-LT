@@ -33,7 +33,13 @@ steps:
   displayName: npm install
   inputs:
     command: 'custom'
-    customCommand: 'install install && cd android-sample'
+    customCommand: 'install --production'
+
+- task: CmdLine@2
+  displayName: Change Directory
+  inputs:
+    script: 'cd android-sample'
+
 
 - task: CmdLine@2
   displayName: Webdriver.io Execution
