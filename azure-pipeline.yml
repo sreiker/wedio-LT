@@ -33,12 +33,12 @@ steps:
   displayName: npm install
   inputs:
     command: 'custom'
-    customCommand: 'install --production'
+    customCommand: 'install install && cd android-sample'
 
 - task: CmdLine@2
   displayName: Webdriver.io Execution
   inputs:
-    script: "npx wdio wdio.conf.lambdatest.ts"
+    script: "npm run SingleAndroidWeb"
   env:
     TENANT: ${{ parameters.tenant }}
     LT_USERNAME: $(USERNAME)
